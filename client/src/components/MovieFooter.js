@@ -1,11 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MovieFooter = (props)=> {
-    const { totalMovies } = props;
-
-    return(<div className="clearfix footer">
-        <div className="hint-text">Showing <b>{totalMovies}</b> entries</div>
+const MovieHeader = ()=> {
+    return(<div className="table-title">
+        <div className="row">
+        <div className="col-sm-6">
+            <h2>IMDB Movie Database</h2>
+        </div>
+        <div className="col-sm-6">
+            <Link className="btn btn-success"><i className="material-icons">&#xE147;</i> <span>Add New Movie</span></Link>
+            <Link to="/movies" className="btn btn-primary">View All Movies</Link>
+        </div>
+        </div>
     </div>);
 }
 
-export default MovieFooter;
+export default MovieHeader;
